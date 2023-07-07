@@ -10,7 +10,7 @@ import * as module from "./module.js";
  * @param {Function} callback Callback function
  */
 
-const addEventListener = function (elements, eventType, callback) {
+const addEventOnElements = function (elements, eventType, callback) {
     for (const element of elements) element.addEventListener(eventType, callback);
 }
 
@@ -21,5 +21,5 @@ const addEventListener = function (elements, eventType, callback) {
 const searchView = document.querySelector("[data-search-view]");
 const searchTogglers = document.querySelectorAll("[data-search-toggler]");
 
-const toggleSearch = () => searchView.classList.toggle('active');
+const toggleSearch = () => searchView.classList.toggle("active");
 addEventOnElements(searchTogglers, "click", toggleSearch);
